@@ -66,7 +66,7 @@ export function Skills() {
                                 <div className="w-16 h-0.5 bg-gray-300 dark:bg-gray-700 mx-auto" />
                             </div>
 
-                            <div className={`grid ${group.title === "additionalExperience" ? "grid-cols-7 gap-4" : "sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"}`}>
+                            <div className={`grid ${group.title === "additionalExperience" ? "grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 gap-4" : "sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"}`}>
                                 {group.skills.map((skill, spos) => (
                                     <div key={skill.name} className={`group relative flex flex-col justify-between p-4 sm:p-5 rounded-xl bg-white/80 dark:bg-white/5 backdrop-blur-sm border border-gray-200 dark:border-white/10 hover:border-gray-300 dark:hover:border-white/20 transition-all duration-500 hover:scale-105 cursor-pointer ${show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`} style={{ transitionDelay: `${gpos * 200 + 400 + spos * 100}ms` }} onMouseEnter={() => setHover(skill.name)} onMouseLeave={() => setHover(null)}>
                                         <div className={`absolute inset-0 rounded-xl bg-gradient-to-r ${skill.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`} />
